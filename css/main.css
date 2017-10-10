@@ -4,7 +4,7 @@ html {
 
 .clock-face {
   height: 300px;
-  margin: 50px;
+  margin: 50px auto;
   position: relative;
   width: 300px;
 
@@ -25,4 +25,23 @@ html {
   width: 14px;
 
   transform-origin: 50% calc(100% - 8px);
+}
+
+.hand-minute {
+  animation: hand-rotate .5s linear infinite;
+}
+
+.hand-hour {
+  animation: hand-rotate 6s linear infinite;
+}
+
+@keyframes hand-rotate {
+
+  0% {
+    transform :rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
